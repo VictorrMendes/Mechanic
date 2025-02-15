@@ -1,9 +1,13 @@
 function add_carro() {
+    let container = document.getElementById('form-carro');
 
-    container = document.getElementById('form-carro')
+    let html = `
+        <br>
+        <div class='row'>
+            <div class='col-md'><input type='text' placeholder='Carro' class='form-control' name='carro'></div>
+            <div class='col-md'><input type='text' placeholder='Placa' class='form-control' name='placa'></div>
+            <div class='col-md'><input type='number' placeholder='Ano' class='form-control' name='ano'></div>
+        </div>`;
 
-    html =
-        "<br>  <div class = 'row'><div class = 'col-md'><input type='text' placeholder='Carro' class='form-control' name='caro'></input></div><div class = 'col-md'><input type='text' placeholder='Placa' class='form-control' name='placa'></input></div><div class = 'col-md'><input type='number' placeholder='Ano' class='form-control' name='ano'></input></div></div>"
-
-    container.innerHTML += html
+    container.insertAdjacentHTML('beforeend', html);
 }
